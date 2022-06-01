@@ -1,0 +1,13 @@
+// Imported global styling from EUI
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,300..700;0,300..700&family=Roboto+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import '@elastic/eui/src/themes/amsterdam/colors_light';
+@import '@elastic/eui/src/themes/amsterdam/globals';
+
+body {
+  @include euiHeaderAffordForFixed($euiHeaderHeightCompensation * 2);
+}
+
+.elastic-mark {
+  fill: $euiColorGhost;
+}
