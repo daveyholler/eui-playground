@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { EuiPageTemplate, EuiSpacer } from '@elastic/eui';
 
-import { FlexExample, SideNav, Table } from './components';
+import { FlexExample, Flyout, SideNav, Table } from './components';
 
 export const Home:React.FC = () => {
   const [currentTab, setCurrentTab] = useState('1')

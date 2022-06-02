@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import { EuiBasicTable } from '@elastic/eui';
+import { EuiBasicTable, EuiButton } from '@elastic/eui';
+
+import { Flyout } from './flyout';
 
 interface PeopleProps {
   alias: string;
@@ -18,6 +20,7 @@ interface PeopleProps {
 
 export const Table:React.FC = () => {
   const [data, setData] = useState<PeopleProps[]>([]);
+  const [character, setCharacter] = useState<PeopleProps | null>(null);
   
   const columns = [
     {
@@ -45,6 +48,21 @@ export const Table:React.FC = () => {
     {
       field: 'occupation',
       name: 'Occupation',
+    },
+    {
+      actions: [
+        {
+          render: (record: PeopleProps) => {
+            return (
+              <Flyout
+                first_name={record.first_name}
+                occupation={record.occupation}
+                last_name={record.last_name}
+              />
+            );
+          }
+        }
+      ]
     }
   ]
 
