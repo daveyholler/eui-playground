@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import { EuiBasicTable, EuiButton } from '@elastic/eui';
+import { EuiBasicTable } from '@elastic/eui';
 
 import { Flyout } from './flyout';
 
@@ -20,7 +20,6 @@ interface PeopleProps {
 
 export const Table:React.FC = () => {
   const [data, setData] = useState<PeopleProps[]>([]);
-  const [character, setCharacter] = useState<PeopleProps | null>(null);
   
   const columns = [
     {
@@ -70,7 +69,6 @@ export const Table:React.FC = () => {
     try {
       const response = await axios.get('https://lost-data.herokuapp.com/people');
       setData(response.data);
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
