@@ -46,7 +46,11 @@ export const FlexExample:React.FC = () => {
         </EuiFlexItem>
       </EuiFlexGroup>
       <EuiSpacer />
-      <EuiButton color="text" fill onClick={updateCount}>💪 Flex</EuiButton>
+      <EuiFlexGroup alignItems="center" justifyContent="center">
+        <EuiFlexItem grow={false}>
+          <EuiButton color="text" fill onClick={updateCount}>💪 Flex <span style={{ transform: 'scale(-1, 1)', display: 'inline-block' }}>💪</span></EuiButton>
+        </EuiFlexItem>
+      </EuiFlexGroup>
     </>
   )
 }

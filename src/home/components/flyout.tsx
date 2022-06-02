@@ -37,7 +37,7 @@ export const Flyout: React.FC<IFlyoutProps> = ({
               </EuiFlexItem>
               <EuiFlexItem>
                 <div>
-                  <EuiBadge style={{ flexGrow: 0 }}>{occupation}</EuiBadge>
+                  <EuiBadge color="#b1666c" style={{ flexGrow: 0 }}>{occupation}</EuiBadge>
                 </div>
               </EuiFlexItem>
             </EuiFlexGroup>
@@ -57,7 +57,7 @@ export const Flyout: React.FC<IFlyoutProps> = ({
             </EuiText>
           </EuiFlyoutBody>
           <EuiFlyoutFooter>
-            <EuiButton fill>Go away</EuiButton>
+            <EuiButton fill onClick={() => setIsFlyoutOpen(false)}>Go away</EuiButton>
           </EuiFlyoutFooter>
         </EuiFlyout>
       ) : (
