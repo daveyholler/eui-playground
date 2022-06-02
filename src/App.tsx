@@ -75,7 +75,7 @@ const App: FunctionComponent = () => {
   const links = getLinks(history, setNavIsOpen);
 
   return (
-    <>
+    <div style={{ minHeight: 'calc(100vh - 7rem)', display: 'flex' }}>
       <EuiHeader
         theme="dark"
         position="fixed"
@@ -280,7 +280,7 @@ const App: FunctionComponent = () => {
           </EuiFlyout>
         </EuiPortal>
       )}
-    </>
+    </div>
   );
 };
 
