@@ -28,7 +28,8 @@ export const Flyout: React.FC<IFlyoutProps> = ({
   const [ isFlyoutOpen, setIsFlyoutOpen ] = useState(false)
   return (
     <>
-      { isFlyoutOpen ? (
+      <EuiButtonEmpty flush="both" size="xs" onClick={() => setIsFlyoutOpen(true)}>View</EuiButtonEmpty>
+      { isFlyoutOpen && (
         <EuiFlyout onClose={() => setIsFlyoutOpen(false)}>
           <EuiFlyoutHeader hasBorder>
             <EuiFlexGroup direction='column'>
@@ -60,9 +61,7 @@ export const Flyout: React.FC<IFlyoutProps> = ({
             <EuiButton fill onClick={() => setIsFlyoutOpen(false)}>Go away</EuiButton>
           </EuiFlyoutFooter>
         </EuiFlyout>
-      ) : (
-        <EuiButtonEmpty flush="both" size="xs" onClick={() => setIsFlyoutOpen(true)}>View</EuiButtonEmpty>
-      )}
+      )} 
     </>
   )
 }

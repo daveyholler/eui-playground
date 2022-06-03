@@ -48,7 +48,7 @@ export const FlexExample:React.FC = () => {
       <EuiSpacer />
       <EuiFlexGroup alignItems="center" justifyContent="center">
         <EuiFlexItem grow={false}>
-          <EuiButton color="text" fill onClick={updateCount}>💪 Flex <span style={{ transform: 'scale(-1, 1)', display: 'inline-block' }}>💪</span></EuiButton>
+          <EuiButton disabled={flexCount.length >= 6} color="text" fill onClick={updateCount}>💪 Flex <span style={{ transform: 'scale(-1, 1)', display: 'inline-block' }}>💪</span></EuiButton>
         </EuiFlexItem>
       </EuiFlexGroup>
     </>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { EuiPageTemplate, EuiSpacer } from '@elastic/eui';
 
-import { FlexExample, SideNav, Table } from './components';
+import { FlexExample, Modal, SideNav, Table } from './components';
 
 export const Home:React.FC = () => {
   const [currentTab, setCurrentTab] = useState('1')
@@ -35,6 +35,7 @@ export const Home:React.FC = () => {
       pageHeader={{
         iconType: "logoSecurity",
         pageTitle: 'Pretty Page, Pal',
+        rightSideItems: [<Modal />],
         tabs: tabs
       }}
     >
