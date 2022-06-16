@@ -1,7 +1,7 @@
 import Dashboard from "./dashboard/dashboard";
 import DashboardIndex from "./dashboard/index";
 import Discover from "./discover/discover";
-import Home from "./home/home";
+import { Home } from "./home/home";
 
 enum SOLUTIONS {
   KIBANA = "kibana",
